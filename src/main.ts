@@ -5,7 +5,6 @@ import store from './store'
 
 async function init() {
   const wasm = await import("wasm-net")
-  console.log(wasm);
 
   Vue.config.productionTip = false
   Vue.prototype.$wasm = wasm

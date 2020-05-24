@@ -16,9 +16,15 @@ export default {
   //   HelloWorld
   // },
   methods: {
-    woo() {
+    async woo() {
       console.log("woo");
-      this.$wasm.greet();
+      console.log(this.$wasm);
+
+      const client = await this.$wasm.start_client(
+        "/ip4/127.0.0.1/tcp/61883/ws",
+        "info"
+      );
+      console.log("rust libp2p client:", client);
     }
   }
 };

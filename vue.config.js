@@ -5,7 +5,7 @@ module.exports = {
     configureWebpack: {
         plugins: [
             new WasmPackPlugin({
-                crateDirectory: path.join(__dirname, "rust"),
+                crateDirectory: path.join(__dirname, "wasm-net"),
                 outDir: path.join(__dirname, "pkg"),
                 outName: "index"
             }),
